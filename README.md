@@ -12,17 +12,19 @@ This repo is a scalable testing harness for evaluating LLMs using [Promptfoo](ht
 
 ### Usage
 
-1. Install dependencies:
+ Install dependencies:
    ```bash
    pip install -r requirements.txt
-
+```
 
 ### Set up .env with API keys
-
-OPENAI_API_KEY=...
-ANTHROPIC_API_KEY=...
-GOOGLE_API_KEY=...
+   ```bash
+    OPENAI_API_KEY=...
+    ANTHROPIC_API_KEY=...
+    GOOGLE_API_KEY=...
+```
 
 ### Run tests
-
-promptfoo eval -c configs/promptfoo.yaml
+   ```bash
+    promptfoo eval -c configs/promptfoo.yaml
+```
