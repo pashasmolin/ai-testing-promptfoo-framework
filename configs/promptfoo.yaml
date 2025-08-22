@@ -1,0 +1,17 @@
+# Root config: configs/promptfoo.yaml
+providers: !include models.yaml
+
+include:
+  - ../prompts/challenge_0_security.yaml
+  - ../prompts/challenge_1_hallucination.yaml
+  - ../prompts/challenge_2_bias.yaml
+  - ../prompts/challenge_3_consistency.yaml
+  - ../prompts/challenge_4_context.yaml
+  - ../prompts/challenge_5_alignment.yaml
+  - ../prompts/challenge_6_regulatory.yaml
+
+defaultTest:
+  assert:
+    - type: latency
+      maxMillis: 5000
+
