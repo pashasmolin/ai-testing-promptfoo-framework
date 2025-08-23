@@ -24,7 +24,7 @@ def run_promptfoo(selected):
     subprocess.run(cmd, check=False)
 
 if __name__ == "__main__":
-    # 👇 Comment/uncomment challenges here
+    # Comment/uncomment challenges here
     selected = [
         "prompts/T0_security.yaml",
         "prompts/T1_hallucination.yaml",
@@ -36,6 +36,6 @@ if __name__ == "__main__":
     ]
 
     if not selected:
-        print("⚠️ No challenge files selected!")
+        print("No challenge files selected!")
     else:
         run_promptfoo(selected)
