@@ -13,18 +13,34 @@ This repo is a scalable testing harness for evaluating LLMs using [Promptfoo](ht
 ### Usage
 
  Install dependencies:
-   ```bash
+```bash
    pip install -r requirements.txt
 ```
 
 ### Set up .env with API keys
-   ```bash
+```bash
     OPENAI_API_KEY=...
     ANTHROPIC_API_KEY=...
     GOOGLE_API_KEY=...
 ```
 
-### Run tests
-   ```bash
+### Run single config file with tests
+```bash
     promptfoo eval -c configs/promptfoo.yaml
+```
+
+
+### Run selected files and generate combined table report with promptfoo cmd
+```bash
+    promptfoo eval -c prompts/T0_security.yaml \
+                -c prompts/T1_hallucination.yaml \
+                -c prompts/T2_bias.yaml \
+                -o results/combined.json \
+                -o results/combined.html \
+                --no-cache
+```
+
+### Run selected files and generate combined table report with python for convinence 
+```bash
+    python run_all.py
 ```
